@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Order</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/order.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="container blue darken-2">
+        <div class="row">
+          <div class="col s8 valign-wrapper">
+            <a href="index.html" class="white-text"><h2 class="valign">Galvanize Delivers</h2></a>
+          </div><!--cols8-->
+          <div class="col s4 right-align">
+            <a href="order.html" class="white-text"><p class="right">Order Delivery<p></a>
+          </div><!--cols4-->
+        </div><!--row-->
+      </div><!--container-->
+    </div><!--header-->
+
+    <div class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col s7 left-align menu">
+            <div class="row">
+              <h2>Menu</h2>
+            </div><!--row-->
+            <div class="row">
+              <div class="col s6 menu-item z-depth-3 left">
+                <img src="img/burger.jpg" / class="food-image">
+                <div class="food-info">
+                  <h3>Royale with Cheese</h3>
+                  <p>$8.99</p>
+                </div><!--foodinfo-->
+                <div class="food-order">
+                  <p><a href="" class="pink-text accent-2 order-link" id='royale'>ADD TO ORDER</a></p>
+                </div><!--foodorder-->
+              </div><!--cols6-->
+              <div class="col s6 menu-item z-depth-3 right">
+                <img src="img/pizza.jpg" / class="food-image">
+                <div class="food-info">
+                  <h3>Arugula Pie</h3>
+                  <p>$11.99</p>
+                </div><!--foodinfo-->
+                <div class="food-order">
+                  <p><a href="" class="pink-text accent-2 order-link" id='pie'>ADD TO ORDER</a></p>
+                </div><!--foodorder-->
+              </div><!--cols6-->
+            </div><!--row-->
+            <div class="row">
+              <div class="col s6 menu-item z-depth-3 left">
+                <img src="img/ribs.jpg" / class="food-image">
+                <div class="food-info">
+                  <h3>Smoked Swine</h3>
+                  <p>$14.99</p>
+                </div><!--foodinfo-->
+                <div class="food-order">
+                  <p><a href="" class="pink-text accent-2 order-link" id='swine'>ADD TO ORDER</a></p>
+                </div><!--foodorder-->
+              </div><!--cols6-->
+              <div class="col s6 menu-item z-depth-3 right">
+                <img src="img/ice_cream.jpg" / class="food-image">
+                <div class="food-info">
+                  <h3>Ice Cream Biscuit</h3>
+                  <p>$7.99</p>
+                </div><!--foodinfo-->
+                <div class="food-order">
+                  <p><a href="" class="pink-text accent-2 order-link" id='ice-cream'>ADD TO ORDER</a></p>
+                </div><!--foodorder-->
+              </div><!--cols6-->
+            </div><!--row-->
+          </div><!--cols7-->
+          <div class="col s5 order left-align">
+            <div class="row">
+              <h2>Order</h2>
+            </div><!--row-->
+            <div class="row">
+              <span>Item</span> <span class='right'>Price</span>
+            </div><!--row-->
+            <div class="row">
+              <div class="receipt-history">
+
+              </div><!--receipthistory-->
+            </div><!--row-->
+            <div class="row">
+              <div class="col s8 right-align">
+                <span>Subtotal</span>
+              </div><!--cols8-->
+              <div class="col s4 right-align">
+                <span id='display-subtotal'>$0.00</span>
+              </div><!--cols4-->
+            </div><!--row-->
+            <div class="row">
+              <div class="col s8 right-align">
+                <span>Tax</span>
+              </div><!--cols8-->
+              <div class="col s4 right-align">
+                <span id='display-tax'>$0.00</span>
+              </div><!--cols4-->
+            </div><!--row-->
+            <div class="row">
+              <div class="col s8 right-align">
+                <span>Total</span>
+              </div><!--cols8-->
+              <div class="col s4 right-align">
+                <span id='display-total'>$0.00</span>
+              </div><!--cols4-->
+            </div><!--row-->
+            <form class="order-form" action="index.html" method="post">
+              <div class="row">
+                <div class="col s2">
+                    <i class="material-icons pink-text text-accent-2">account_circle</i>
+                </div>
+                <div class="col s10 input-field">
+                  <input type="text" name="name" id="name" value="" placeholder="Your Name" class="validate">
+                <label for="name">Name</label>
+                </div><!--inputfield-->
+              </div><!--row-->
+              <div class="row">
+                <div class="col s2">
+                    <i class="material-icons pink-text text-accent-2">phone</i>
+                </div>
+                <div class="col s10 input-field">
+                  <input type="text" phone="name" id="phone" value="" placeholder="(xxx)xxx-xxxx" class="validate" validate>
+                  <label for="phone">Phone number</label>
+                </div><!--inputfield-->
+              </div><!--row-->
+              <div class="row">
+                <div class="col s2">
+                    <i class="material-icons pink-text text-accent-2">business</i>
+                </div>
+                <div class="col s10 input-field">
+                  <input type="text" address="name" id="address" value="" placeholder="Your Address" class="validate">
+                  <label for="address">Address</label>
+                </div><!--inputfield-->
+              </div><!--row-->
+              <div class="row center-align">
+                <button type="submit" name="submit" class="btn pink accent-2">Place Order</button>
+              </div><!--row-->
+
+            </form>
+          </div><!--cols5order-->
+        </div><!--row-->
+      </div><!--container-->
+    </div><!--main-->
+
+
+
+
+
+    <div class="nav">
+      <div class="container blue darken-2 white-text">
+        <div class="row">
+          <div class="col s8">
+            <h3>Galvanize Delivers</h3>
+            <p>Fine Dining, Delivered.</p>
+          </div><!--cols8-->
+          <div class="col s4">
+            <a href="index.html" class="white-text"><p>Home</p></a>
+            <a href="order.html" class="white-text"><p>Order Delivery</p></a>
+          </div><!--cols4-->
+        </div><!--row-->
+      </div><!--container-->
+    </div><!--nav-->
+
+    <div class="footer">
+      <div class="container blue darken-4 blue-grey-text text-lighten-4">
+        <div class="row">
+          <div class="col s8 offset-s1">
+            <span>&copy; 2016 Galvanize Delivers</span>
+          </div>
+          <div class="col s4">
+
+          </div>
+
+      </div><!--row-->
+      </div><!--container-->
+    </div><!--footer-->
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.js">
+    </script>
+    <script type="text/javascript" src="js/main.js">
+    </script>
+
+
+
+  </body>
+</html>
