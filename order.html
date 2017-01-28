@@ -30,7 +30,7 @@
               <h2>Menu</h2>
             </div><!--row-->
             <div class="row">
-              <div class="col s6 menu-item z-depth-3 left">
+              <div class="col s12 l6 menu-item z-depth-3 left">
                 <img src="img/burger.jpg" / class="food-image">
                 <div class="food-info">
                   <h3>Royale with Cheese</h3>
@@ -40,7 +40,7 @@
                   <p><a href="" class="pink-text accent-2 order-link" id='royale'>ADD TO ORDER</a></p>
                 </div><!--foodorder-->
               </div><!--cols6-->
-              <div class="col s6 menu-item z-depth-3 right">
+              <div class="col s12 l6 menu-item z-depth-3 right">
                 <img src="img/pizza.jpg" / class="food-image">
                 <div class="food-info">
                   <h3>Arugula Pie</h3>
@@ -52,7 +52,7 @@
               </div><!--cols6-->
             </div><!--row-->
             <div class="row">
-              <div class="col s6 menu-item z-depth-3 left">
+              <div class="col s12 l6 menu-item z-depth-3 left">
                 <img src="img/ribs.jpg" / class="food-image">
                 <div class="food-info">
                   <h3>Smoked Swine</h3>
@@ -62,7 +62,7 @@
                   <p><a href="" class="pink-text accent-2 order-link" id='swine'>ADD TO ORDER</a></p>
                 </div><!--foodorder-->
               </div><!--cols6-->
-              <div class="col s6 menu-item z-depth-3 right">
+              <div class="col s12 l6 menu-item z-depth-3 right">
                 <img src="img/ice_cream.jpg" / class="food-image">
                 <div class="food-info">
                   <h3>Ice Cream Biscuit</h3>
@@ -83,6 +83,8 @@
             </div><!--row-->
             <div class="row">
               <div class="receipt-history">
+        
+
 
               </div><!--receipthistory-->
             </div><!--row-->
@@ -110,13 +112,14 @@
                 <span id='display-total'>$0.00</span>
               </div><!--cols4-->
             </div><!--row-->
-            <form class="order-form" action="index.html" method="post">
+<!--FORM-->
+            <form class="order-form" action="order.html" method="post">
               <div class="row">
                 <div class="col s2">
                     <i class="material-icons pink-text text-accent-2">account_circle</i>
                 </div>
                 <div class="col s10 input-field">
-                  <input type="text" name="name" id="name" value="" placeholder="Your Name" class="validate">
+                  <input type="text" name="name" id="name" value="" placeholder="Your Name" class="validate" required>
                 <label for="name">Name</label>
                 </div><!--inputfield-->
               </div><!--row-->
@@ -125,7 +128,7 @@
                     <i class="material-icons pink-text text-accent-2">phone</i>
                 </div>
                 <div class="col s10 input-field">
-                  <input type="text" phone="name" id="phone" value="" placeholder="(xxx)xxx-xxxx" class="validate" validate>
+                  <input type="text" phone="name" id="phone" value="" placeholder="(xxx)xxx-xxxx" class="validate" validate required>
                   <label for="phone">Phone number</label>
                 </div><!--inputfield-->
               </div><!--row-->
@@ -134,7 +137,7 @@
                     <i class="material-icons pink-text text-accent-2">business</i>
                 </div>
                 <div class="col s10 input-field">
-                  <input type="text" address="name" id="address" value="" placeholder="Your Address" class="validate">
+                  <input type="text" address="name" id="address" value="" placeholder="Your Address" class="validate" required>
                   <label for="address">Address</label>
                 </div><!--inputfield-->
               </div><!--row-->
