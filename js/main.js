@@ -8,9 +8,14 @@ let orderButton = document.querySelector('.btn');
 let form = document.querySelector('form');
 let main = document.querySelector('.main');
 
+$(document).ready(function() {
+  $(".button-collapse").sideNav();
+})
+
+
 window.onload = function() {
   receiptHistory.innerHTML = localStorage.orderhistory;
-  subtotal = parseFloat(localStorage.subtotal);
+  subtotal = Number(parseFloat(localStorage.subtotal).toFixed(2));
   displaySubtotal.innerHTML = localStorage.subtotal;
   var oldItems = document.querySelectorAll('.receipt-item');
   for (var i = 4; i < oldItems.length; i++) {
@@ -38,19 +43,19 @@ function addToOrder(event) {
   item.classList.add('receipt-item');
   if (event.target.id === 'royale') {
     item.innerHTML = "<span>Royale With Cheese</span> <span class='right'>$8.99</span><a class='btn-floating btn-medium grey'><i class='material-icons'>close</i></a>";
-    subtotal += 8.99;
+    subtotal += Number(8.99.toFixed(2));
   }
   else if (event.target.id === 'pie') {
     item.innerHTML = "<span>Arugula Pie</span> <span class='right'>$11.99</span><a class='btn-floating btn-medium grey'><i class='material-icons'>close</i></a>"
-    subtotal += 11.99;
+    subtotal += Number(11.99.toFixed(2));
   }
   else if (event.target.id === 'swine') {
     item.innerHTML = "<span>Smoked Swine</span> <span class='right'>$14.99</span><a class='btn-floating btn-medium grey'><i class='material-icons'>close</i></a>"
-    subtotal += 14.99;
+    subtotal += Number(14.99.toFixed(2));
   }
   else if (event.target.id === 'ice-cream') {
     item.innerHTML = "<span>Ice Cream Biscuit</span> <span class='right'>$7.99</span><a class='btn-floating btn-medium grey'><i class='material-icons'>close</i></a>"
-    subtotal += 7.99;
+    subtotal += Number(7.99.toFixed(2));
   }
   receiptHistory.append(item);
   console.log(subtotal);
@@ -87,7 +92,7 @@ function placeOrder(event) {
 
 function removeItem(event) {
   let price = this.parentNode.children[1].textContent.substr(1);
-  subtotal -= price;
+  subtotal -= Number(parseFloat(price).toFixed(2));
   localStorage.setItem('subtotal', subtotal);
   displaySubtotal.innerHTML = `$${subtotal.toFixed(2)}`;
   displayTax.innerHTML = `$${(0.08 * subtotal).toFixed(2)}`;

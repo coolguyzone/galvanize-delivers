@@ -3,6 +3,13 @@ h2 {
   font-size: 2em;
 }
 
+/*HEADER*/
+.header p {
+  padding: 17px 20px 17px 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /*MAIN*/
 .main {
   background: none;
