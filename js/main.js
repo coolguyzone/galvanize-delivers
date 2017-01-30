@@ -14,15 +14,23 @@ $(document).ready(function() {
 
 
 window.onload = function() {
-  receiptHistory.innerHTML = localStorage.orderhistory;
-  subtotal = Number(parseFloat(localStorage.subtotal).toFixed(2));
-  displaySubtotal.innerHTML = localStorage.subtotal;
-  var oldItems = document.querySelectorAll('.receipt-item');
-  for (var i = 4; i < oldItems.length; i++) {
-    let height = main.offsetHeight;
-    let newHeight = main.offsetHeight + 50;
-    main.style.height = `${newHeight}px`
+  if (localStorage.getItem("orderhistory") === null){
+    }
+  else {
+    receiptHistory.innerHTML = localStorage.orderhistory;
+    var totalReceipts = document.querySelectorAll('.receipt-item');
+    if (totalReceipts.length === 0) {
+      localStorage.setItem('subtotal', '0');
+    }
+    subtotal = Number(parseFloat(localStorage.subtotal).toFixed(2));
+    displaySubtotal.innerHTML = localStorage.subtotal;
+    var oldItems = document.querySelectorAll('.receipt-item');
+    for (var i = 4; i < oldItems.length; i++) {
+      let height = main.offsetHeight;
+      let newHeight = main.offsetHeight + 50;
+      main.style.height = `${newHeight}px`
   }
+}
   let btns = document.querySelectorAll('.btn-medium');
   btns.forEach(function(element){
     element.addEventListener('click', removeItem)

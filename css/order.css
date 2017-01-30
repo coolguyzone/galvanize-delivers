@@ -29,6 +29,7 @@ h2 {
 
 .food-info {
   border-bottom: solid 1px lightgrey;
+  height: 90px;
 }
 
 
@@ -36,17 +37,17 @@ h2 {
   margin-bottom: 40px;
 }
 
-.main .s7 {
+.main .m7 {
   padding-right: 20px;
 }
 
-.main .s5 {
+.main .m5 {
   padding-left: 20px;
 }
 
 /*ORDER*/
 
-.main .s5 span {
+.main .m5 span {
   font-weight: bold;
 }
 
@@ -83,6 +84,7 @@ h2 {
   padding-top: 16px;
 }
 
+
 /*MEDIA QUERIES*/
 @media only screen and (min-width: 600px) {
   .menu-item {
@@ -91,5 +93,19 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
-  .menu-item
+  .menu-item {
+    margin-bottom: 20px;
+  }
+  .main {
+    height: 2500px;
+  }
+  .nav, .footer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .food-info h3 {
+    font-size: 1.2em;
+  }
 }
