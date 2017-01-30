@@ -22,8 +22,12 @@ window.onload = function() {
     var totalReceipts = document.querySelectorAll('.receipt-item');
     if (totalReceipts.length === 0) {
       localStorage.setItem('subtotal', '0');
+      localStorage.setItem('tax', '0');
+      localStorage.setItem('total', '0');
     }
     subtotal = Number(parseFloat(localStorage.subtotal).toFixed(2));
+    displayTax.innerHTML = localStorage.tax;
+    displayTotal.innerHTML = localStorage.total;
     displaySubtotal.innerHTML = localStorage.subtotal;
     var oldItems = document.querySelectorAll('.receipt-item');
     for (var i = 4; i < oldItems.length; i++) {
@@ -78,6 +82,8 @@ function addToOrder(event) {
   }
 //SAVE INFO IN LOCALSTORAGE
   localStorage.setItem('subtotal', subtotal);
+  localStorage.setItem('tax', `${displayTax.innerHTML}`);
+  localStorage.setItem('total', `${displayTotal.innerHTML}`);
   localStorage.setItem('orderhistory', `${receiptHistory.innerHTML}`);
   let btns = document.querySelectorAll('.btn-medium');
   btns.forEach(function(element){
@@ -100,10 +106,20 @@ function placeOrder(event) {
 function removeItem(event) {
   let price = this.parentNode.children[1].textContent.substr(1);
   subtotal -= Number(parseFloat(price).toFixed(2));
+  var totalReceipts = document.querySelectorAll('.receipt-item');
+  if (subtotal < 1){
+    displaySubtotal.innerHTML = 0;
+    displayTax.innerHTML = 0;
+    displayTotal.innerHTML = 0;
+  }
+  else {
+    displaySubtotal.innerHTML = `$${subtotal.toFixed(2)}`;
+    displayTax.innerHTML = `$${(0.08 * subtotal).toFixed(2)}`;
+    displayTotal.innerHTML = `$${(subtotal + (0.08 * subtotal)).toFixed(2)}`;
+  }
   localStorage.setItem('subtotal', subtotal);
-  displaySubtotal.innerHTML = `$${subtotal.toFixed(2)}`;
-  displayTax.innerHTML = `$${(0.08 * subtotal).toFixed(2)}`;
-  displayTotal.innerHTML = `$${(subtotal + (0.08 * subtotal)).toFixed(2)}`;
+  localStorage.setItem('tax', `${displayTax.innerHTML}`);
+  localStorage.setItem('total', `${displayTotal.innerHTML}`);
   this.parentNode.parentNode.removeChild(this.parentNode);
   localStorage.setItem('orderhistory', `${receiptHistory.innerHTML}`);
 }
