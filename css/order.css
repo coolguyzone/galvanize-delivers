@@ -99,7 +99,7 @@ h2 {
   .main {
     height: 2500px;
   }
-  .nav, .footer {
+  .bottom-nav, .footer {
     display: none;
   }
 }

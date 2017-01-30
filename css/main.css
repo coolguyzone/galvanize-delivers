@@ -40,10 +40,6 @@ nav .right {
   padding: 0 14px;
 }
 
-
-
-
-
 /*MAIN*/
 .main{
   height: 400px;
@@ -63,7 +59,6 @@ h1 {
 }
 
 /*INFO*/
-
 .info .row {
   width: 100%;
   text-align: center;
@@ -87,27 +82,27 @@ h1 {
   margin: 36px 8px 0 0;
 }
 
-/*NAV*/
-.nav {
+/*BOTTOM NAV*/
+.bottom-nav {
   height: 120px;
   background-color: #1976D2;
   padding-top: 34px;
 }
 
-.nav h3 {
+.bottom-nav h3 {
   font-size: 1.6em;
   margin-bottom: 0;
 }
 
-.nav h3, .nav .s4 p:first-of-type {
+.bottom-nav h3, .bottom-nav .s4 p:first-of-type {
   margin-top: 0;
 }
 
-.nav .s4 p:first-of-type {
+.bottom-nav .s4 p:first-of-type {
   margin-bottom: 0;
 }
 
-.nav .s4 p:nth-of-type(2) {
+.bottom-nav .s4 p:nth-of-type(2) {
   margin-top: 0;
 }
 
